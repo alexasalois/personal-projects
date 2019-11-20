@@ -1,0 +1,69 @@
+/*********************************************
+
+Here is a description of any special CSS used.
+In this case it's just padding and margin to 0
+so the canvas is flush with the top left corner.
+
+**********************************************/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'VT323', monospace;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+#startButton {
+  font-family: 'VT323', monospace;
+  text-align: center;
+  font-size: 30px;
+  height: 35px;
+  width: 55px;
+  background-color: white;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  cursor: pointer;
+}
+
+#startButton:hover {
+  background-color: red;
+  transition: background 1s;
+}
+
+.nextButton {
+  font-family: 'VT323', monospace;
+  text-align: center;
+  font-size: 30px;
+  height: 35px;
+  width: 55px;
+  background-color: white;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background-color: red;
+  transition: background 1s;
+}
+
+#page2, #page3, #page4, #page5, #page6 {
+  display: none;
+  font-size: 30px;
+  color: black;
+}
