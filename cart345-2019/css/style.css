@@ -50,7 +50,7 @@ h3 {
   text-align: center;
   font-size: 30px;
   height: 35px;
-  width: 55px;
+  width: 75px;
   background-color: white;
   -webkit-transition: width 2s;
   transition: width 2s;
@@ -66,4 +66,27 @@ h3 {
   display: none;
   font-size: 30px;
   color: black;
+}
+
+#welcomeCard {
+  display: none;
+  font-size: 25px;
+/*  transition-delay: 2s;
+  -webkit-transition: width 3s; */
+}
+
+#inputName {
+  font-family: 'VT323', monospace;
+  font-size: 25px;
+  width: 70px;
+  height: 35px;
+  background-color: white;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  cursor: pointer;
+}
+
+#inputName:hover {
+  background-color: red;
+  transition: background 1s;
 }
