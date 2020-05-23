@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+
+    <!-- CSS stylesheet(s) -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Library script(s) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- My script(s) -->
+    <script src="js/script.js"></script>
+
+            <script>
+              greetings = [
+                "hello",
+                "hey",
+                "howdy",
+                "hi",
+                "yo",
+                "good morning",
+                "good evening",
+                "good afternoon",
+                "good night",
+                "what's up",
+                "wassup"
+              ]
+
+              greetingsAnswers = [
+                "hello",
+                "hey",
+                "howdy",
+                "hi",
+                "yo",
+                "hey there",
+                "hiii",
+                "hiya",
+                "oh. hi",
+                "um, hello",
+                "what",
+                "who is this"
+              ]
+
+              smallTalk = [
+                "how are you",
+                "what are you up to",
+                "how are you doing",
+                "are you okay",
+                "you good",
+                "how are you feeling"
+              ]
+
+                know = {
+                    "tell me something" : "i don't know what to talk about",
+                    "what is your name" : "why",
+                    "what do you like" : "what do you like?",
+                    "ok" : "i don't know what to say",
+                    "sorry" : "it's okay",
+                    "what do you want" : "what DO you want?"
+                };
+
+                function checkWords() {
+                    var user = document.getElementById("userBox").value;
+                    document.getElementById("userBox").value = "";
+                    document.getElementById("chatLog").innerHTML += user+"<br>";
+                    if (user in greetings) {
+                        document.getRandomElementById("chatLog").innerHTML += greetingsAnswers[user]+"<br>";
+                    } else {
+                        document.getElementById("chatLog").innerHTML += "What?<br>";
+                    }
+                }
+            </script>
+        </head>
+        <body>
+          <br>
+          <br>
+          <h3>write something. simple, no caps or punctuation, this isn't an essay or a therapist. get over yourself.</h3>
+          <br>
+          <br>
+            <p id="chatLog">what do you want?<br></p>
+            <input type="text" id="userBox" value="" placeholder="press 'enter' after typing" onkeydown="if (event.keyCode == 13) {checkWords()}">
+        </body>
+</html>
