@@ -75,10 +75,12 @@
                     var user = document.getElementById("userBox").value;
                     document.getElementById("userBox").value = "";
                     document.getElementById("chatLog").innerHTML += user+"<br>";
-                    console.log(user);
+
                     if (greetings.indexOf(user) !== -1) {
                         const randomGreeting = greetingsAnswers[Math.floor(Math.random() * greetingsAnswers.length)];
+                        const randomSmallTalk = smallTalk[Math.floor(Math.random() * smallTalk.length)];
                         document.getElementById("chatLog").innerHTML += randomGreeting+"<br>";
+                        document.getElementById("chatLog").innerHTML += randomSmallTalk+"<br>";
                     } else {
                         document.getElementById("chatLog").innerHTML += "What?<br>";
                     }
