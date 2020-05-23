@@ -27,7 +27,12 @@
                 "good afternoon",
                 "good night",
                 "what's up",
-                "wassup"
+                "wassup",
+                "yo yo",
+                "yoyoyo",
+                "yooo",
+                "hellooo",
+                "hiii"
               ]
 
               greetingsAnswers = [
@@ -37,12 +42,15 @@
                 "hi",
                 "yo",
                 "hey there",
-                "hiii",
+                "hiiiii",
                 "hiya",
                 "oh. hi",
                 "um, hello",
                 "what",
-                "who is this"
+                "hey man",
+                "yooooooooooo",
+                "sup",
+                "i'm a bit busy but sure wtv"
               ]
 
               smallTalk = [
@@ -67,8 +75,10 @@
                     var user = document.getElementById("userBox").value;
                     document.getElementById("userBox").value = "";
                     document.getElementById("chatLog").innerHTML += user+"<br>";
-                    if (user in greetings) {
-                        document.getRandomElementById("chatLog").innerHTML += greetingsAnswers[user]+"<br>";
+                    console.log(user);
+                    if (greetings.indexOf(user) !== -1) {
+                        const randomGreeting = greetingsAnswers[Math.floor(Math.random() * greetingsAnswers.length)];
+                        document.getElementById("chatLog").innerHTML += randomGreeting+"<br>";
                     } else {
                         document.getElementById("chatLog").innerHTML += "What?<br>";
                     }
@@ -78,10 +88,12 @@
         <body>
           <br>
           <br>
-          <h3>write something. simple, no caps or punctuation, this isn't an essay or a therapist. get over yourself.</h3>
+          <h4>quarantine buddy simulator</h4>
           <br>
           <br>
-            <p id="chatLog">what do you want?<br></p>
-            <input type="text" id="userBox" value="" placeholder="press 'enter' after typing" onkeydown="if (event.keyCode == 13) {checkWords()}">
+            <p id="chatLog">a conversation usually starts with a greeting. in case you forgot<br></p>
+            <br>
+            <br>
+            <input type="text" id="userBox" value="" placeholder="press 'enter' after typing" onkeydown="if (event.keyCode == 13) {setTimeout(checkWords, 2000);}">
         </body>
 </html>
