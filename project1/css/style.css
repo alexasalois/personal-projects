@@ -25,4 +25,10 @@ body {
 
 #chatLog {
   color: blue;
+  position: relative;
+}
+
+#friendChat {
+  color: red;
+  position: relative;
 }
